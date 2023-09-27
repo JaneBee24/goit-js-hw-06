@@ -22,7 +22,7 @@ images.forEach((image) => {
   listItem.classList.add("gallery-item");
   img.src = image.url;
   img.alt = image.alt;
-
+  img.width = 200; 
   listItem.appendChild(img);
   fragment.appendChild(listItem);
 });
