@@ -14,10 +14,8 @@ ingredients.forEach((ingredient) => {
   const listItem = document.createElement("li");
   listItem.textContent = ingredient;
   listItem.classList.add("item");
-  const lastChild = ingredientsList.lastElementChild;
-  if (lastChild) {
-    lastChild.after(listItem);
-  } else {
-    ingredientsList.appendChild(listItem);
-  }
+  fragment.appendChild(listItem);
 });
+
+ingredientsList.innerHTML = '';
+ingredientsList.appendChild(fragment);
